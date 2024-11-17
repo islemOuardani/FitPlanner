@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FitPlanner</string>
+    <string name="facebook_app_id">1752296315548330</string>
+    <string name="fb_login_protocol_scheme">fb1752296315548330</string>
+    <string name="facebook_client_token">806e66d20c639f1e4b70e89e7c238598</string>
+
+</resources>

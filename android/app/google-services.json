@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "210649767795",
+    "project_id": "fitplanner-c6d3d",
+    "storage_bucket": "fitplanner-c6d3d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:210649767795:android:c24a4a385168844bc16f06",
+        "android_client_info": {
+          "package_name": "com.example.fitplanner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "210649767795-aalglr00kq2smsla21buso5pm8feqqmo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fitplanner",
+            "certificate_hash": "fdfc1cb5911ad559562da377bffed6b42103298e"
+          }
+        },
+        {
+          "client_id": "210649767795-aqghdtar7ujfu5a23qrldi83mffernm0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnR9tban9Qoe_lSro5ziwYRiLZCxMfgV8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "210649767795-aqghdtar7ujfu5a23qrldi83mffernm0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "210649767795-upihdecmojsvikuj0jq6tpmprpsbjckn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.fitplanner"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

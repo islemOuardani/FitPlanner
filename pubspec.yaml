@@ -1,0 +1,47 @@
+name: fit_planner
+description: "A new Flutter project."
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.3
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_svg: ^2.0.7
+  ruler_slider: ^0.0.5
+
+  cupertino_icons: ^1.0.8
+  flutter_native_splash: ^2.4.2
+  google_sign_in: ^6.2.2
+  firebase_core: ^3.8.0
+  firebase_auth: ^5.3.3
+  flutter_facebook_auth: ^7.1.1
+  cloud_firestore: ^5.5.0
+  http: ^1.1.0
+  webview_flutter: ^4.10.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons: "^0.14.1"
+  flutter_lints: ^5.0.0
+
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/photos/icon.png"
+  min_sdk_android: 24
+  adaptive_icon_background: "#ffffff"
+  adaptive_icon_foreground: "assets/photos/icon.png"
+
+flutter:
+  assets:
+    - assets/photos/
+
+  uses-material-design: true
+
