@@ -197,7 +197,7 @@ class GenderState extends State<GenderPage>{
                         if (mounted){
                           Navigator.pop(context);
                           Navigator.of(context).pushReplacement(
-                              MaterialPageRoute(builder: (context) => const WelcomePage())
+                              MaterialPageRoute(builder: (context) => WelcomePage( user: user,))
                           );
                         }
                       }else if (await UserController.userExists(user) == 0){

@@ -91,7 +91,7 @@ class LoginState extends State<LoginPage>{
                                         if (mounted){
                                           Navigator.pop(context);
                                           Navigator.of(context).pushReplacement(
-                                              MaterialPageRoute(builder: (context) => const WelcomePage())
+                                              MaterialPageRoute(builder: (context) => WelcomePage(user: user,))
                                           );
                                         }
                                       } else {

@@ -8,7 +8,6 @@ import 'package:fit_planner/ui/pages/recipe.page.dart';
 import 'package:fit_planner/ui/pages/weight.page.dart';
 import 'package:fit_planner/ui/pages/welcome.page.dart';
 import 'package:flutter/material.dart';
-
 import 'ui/pages/gender.page.dart';
 import 'ui/pages/goal.page.dart';
 import 'ui/pages/name.page.dart';
@@ -31,7 +30,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
         ),
         routes:{
-          '/': (context) => UserController.user != null ? const WelcomePage(): const GenderPage(),
+          '/': (context) => UserController.user != null ? WelcomePage(user: UserController.user,): const GenderPage(),
           '/page': (context) => const NamePage(user: null, g: 0,),
           '/goal': (context) => const GoalPage(user: null, g: 0, name: '',),
           '/age': (context) => const AgePage(user: null, g: 0, name: '',goal: 0),

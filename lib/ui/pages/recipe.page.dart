@@ -1,10 +1,11 @@
 import 'dart:convert';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fit_planner/controllers/user_controller.dart';
 import 'package:fit_planner/models/recipe_model.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:webview_flutter/webview_flutter.dart';
+
+import 'chat.page.dart';
 
 class RecipePage extends StatefulWidget{
 
@@ -21,7 +22,7 @@ class RecipeState extends State<RecipePage> {
   Future<void> fetchRecipes(String q) async {
 
     int cal = await UserController.requiredKcal(UserController.user);
-
+    print(cal);
     const String apiUrl = 'https://api.edamam.com/api/recipes/v2';
     const String appId = 'f52cddcc';
     const String appKey = '51dfb2ab317ff550576228b3b0403885';
@@ -79,7 +80,20 @@ class RecipeState extends State<RecipePage> {
     String q;
     return Scaffold(
       appBar: AppBar(
-        title: Text('Find a receipt that match your goal'),
+        title: Text('Find a receipt that match \nyour goal'),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.chat, size: 30), // Back icon
+            onPressed: () {
+              Navigator.push(
+                context,
+                PageRouteBuilder(
+                  pageBuilder: (context, animation, secondaryAnimation) => ChatPage(),
+                ),
+              );
+            },
+          ),
+        ]
       ) ,
       body: Container(
         margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),

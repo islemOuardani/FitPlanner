@@ -150,4 +150,22 @@ class UserController {
     else return -1;
   }
 
+  static Future<List<dynamic>> userInfo(User? user) async {
+    final userRef = FirebaseFirestore.instance.collection('users').doc(user?.uid);
+    final docSnapshot = await userRef.get();
+
+    if (docSnapshot.exists) {
+      var userData = docSnapshot.data();
+
+      List<dynamic> userInfoList = [
+        userData?['name'],
+        userData?['age'],
+        userData?['weight'],
+        userData?['height'],
+      ];
+      return userInfoList;
+    } else {
+      return []; // Return an empty list if no document exists
+    }
+  }
 }

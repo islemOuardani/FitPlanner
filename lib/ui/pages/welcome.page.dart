@@ -6,19 +6,21 @@ import 'package:flutter/material.dart';
 
 
 class WelcomePage extends StatefulWidget{
-  const WelcomePage({super.key});
+  final User ? user;
+  const WelcomePage({super.key, required this.user});
   @override
-  WelcomeState createState() => WelcomeState();
+  WelcomeState createState() => WelcomeState(user);
 }
 
 class WelcomeState extends State<WelcomePage>{
-
+  WelcomeState(this.user);
+  User? user;
   String? userName;
 
   @override
   void initState() {
     super.initState();
-    UserController.getName(UserController.user).then((name) {
+    UserController.getName(user).then((name) {
       setState(() {
         userName = name;
       });
@@ -47,7 +49,7 @@ class WelcomeState extends State<WelcomePage>{
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   CircleAvatar(
-                    foregroundImage: NetworkImage(UserController.user?.photoURL ?? ''),
+                    foregroundImage: NetworkImage(user?.photoURL ?? ''),
                     radius: 50,
                   ),
                   const SizedBox(width: 20.0,),
